@@ -5,11 +5,11 @@ wechat applet mobile web application
 This is a wechat online platform for campus students to exchange or buy product in special day or some diffent activities. Currently, we want to camplish Chrisma Day sell Eve's apples and provide some other festivals presents for students in University.
 
 ## functional schedule
-Christmas Day：
+* Christmas Day：
  - Sell apples: share, draw a lottery, and group to shopping...
-Shop coupons：
+* Shop coupons：
  - Shop coupons: use coupons for self, give to others, and verify thecoupon
-Secondhand book transaction：
+* Secondhand book transaction：
  - sec-hand book platform: users can publish and others can review books messages.
 
  ## Functional screenshot
