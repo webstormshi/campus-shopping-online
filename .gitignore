@@ -1,4 +1,4 @@
 node_modules
-# /react-antd-backend-system/node_modules
-# /vue-mobile-shopping/node_modules
-# /wechat-online-system/node_modules
+/react-antd-backend-system/node_modules
+/vue-mobile-shopping/node_modules
+/wechat-online-system/node_modules
