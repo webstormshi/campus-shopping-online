@@ -1,0 +1,8 @@
+@import './weui.wxss';
+@import './pages/template/list.wxss';
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

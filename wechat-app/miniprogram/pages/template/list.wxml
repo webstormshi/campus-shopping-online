@@ -1,0 +1,174 @@
+<!--首页展示列表模板-->
+<template name="factory_list">  
+  <navigator url='../factoryDetail/factoryDetail?id={{id}}'>
+      <view class="item-box">
+          <image class="company-logo" src="{{logo}}" mode='aspectFit'/>
+          <view class="desc">
+            <view class="name">{{name}}</view>
+            <view class="detail">
+              <text class="locate">{{region}}</text>
+              <text class="number">已售 {{num}}</text>
+            </view>
+          </view>
+        </view>
+  </navigator>
+</template>
+
+<!--奖金展示列表模板-->
+<template name="job_list">  
+  <navigator url='../jobDetail/jobDetail?id={{id}}'>
+      <view class="item-box">
+        <image class="company-logo" src='{{logo}}' mode='aspectFit' />
+        <view class="desc">
+          <view class="name">{{factoryname}}</view>
+          <view class="detail">
+            <text class="locate">{{name}}</text>
+            <text class="number">{{bonus?'奖金'+bonus+'元/人':'奖金未定'}}</text>
+          </view>
+        </view>
+      </view>
+  </navigator>
+</template>
+
+<!-- 在招岗位列表 -->
+<template name="job_online">
+    <navigator class='job-online' url='../jobDetail/jobDetail?id={{id}}'>
+        <view class='title'>
+            <text class='name'>{{name}}</text>
+            <text class='salary'>{{salary}}</text>
+        </view>
+        <view class="desc">
+            <text class='address'>{{region}}</text>
+            <text class='address'>招聘人数：{{num}}</text>
+        </view>
+    </navigator>
+</template>
+
+
+<!-- 客服按钮footer -->
+<template name="footer">
+    <view class="footer" style="border-top:1px solid #eee">
+            <view class="contact-btn" bindtap='makeCall'><image src="/images/tel.png"/></view>
+            <view class="note">
+                <button class='note-box' open-type='contact'><image src="/images/contact.png" class='contact-img' /></button>
+                <view class='note-box' bindtap='noteTap'><image src="/images/note.png" class='note-img'/></view>
+            </view>
+    </view>
+</template>
+
+
+ 
+<!-- 幼师招聘岗位模版 -->
+  <template name="prod_list"> 
+    <view class="weui-panel__bd">
+          <navigator url="../jobDetail/jobDetail?id={{id}}" class="weui-media-box_appmsg" hover-class="weui-cell_active" bindtap='get_position_detail'>
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                   <image class="weui-media-box__thumb thumb" src="{{logo}}" mode='aspectFit' /> 
+              </view>
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title item-title" style='text-align:left'>{{position_work}}</view>
+                  <view class="weui-media-box__desc item-school" style='text-align:left'>{{schoolname}}</view>
+                  <view class="weui-media-box__desc item-request" style='text-align:left'>{{city_name}}</view>
+              </view>
+              <view class="weui-media-box__bd item-right">
+                  <view class="weui-media-box__title item-salary">{{salary}}</view> 
+                   <view class="weui-media-box__desc item-date" style='text-align:right'>{{add_time_format}}</view>  
+              </view>
+          </navigator>
+          <view class='border-bottom'></view>
+    </view>
+ </template>  
+
+<!-- 幼师招聘学校模版 -->
+   <template name="school_list">  
+     <view class="weui-panel__bd">
+          <navigator url="../schoolDetail/schoolDetail?userid={{}}&schoolid={{id}}" class="weui-media-box_appmsg" hover-class="weui-cell_active">
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb thumb" src="{{logo}}"  mode='aspectFit' />
+              </view>
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__desc school-title">{{name}}</view>
+                  <view class="weui-media-box__desc item-request">{{type==1?"幼儿园 ":"早教 "}}| {{region}}</view>
+              </view>
+              <view class="weui-media-box__bd item-right">
+                   <view class="item-dist">{{count_visit}}次访问</view>
+              </view>
+          </navigator>
+        <view class='border-bottom'></view>
+    </view> 
+  </template>  
+
+<!-- 投递记录投递成功模版 -->
+    <template name="deliver_list">  
+     <view class="weui-panel__bd">
+          <navigator url="../jobDetail/jobDetail?id={{id}}&positionid={{positionid}}" class="weui-media-box_appmsg" hover-class="weui-cell_active">
+              <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb thumb" src="{{logo}}"  mode='aspectFit' />
+              </view>
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title item-title">{{position_work}}</view>
+                  <view class="weui-media-box__desc item-school">{{schoolname}}</view>
+                  <view class="weui-media-box__desc item-request">{{city_name}} | {{education}} | {{working_years}}</view>
+              </view>
+              <view class="weui-media-box__bd item-right">
+                   <view class="weui-media-box__title item-deliver">{{"status==1"?"投递成功":"投递失败"}}</view>
+                  <view class="weui-media-box__desc item-date">{{add_time_format}}</view> 
+              </view>
+          </navigator>
+          <view class='border-bottom'></view>
+    </view> 
+  </template>
+
+  <!-- 在招职位模板 -->
+   <template name="job_online">  
+     <view class="weui-panel__bd">
+          <navigator url="../jobDetail/jobDetail?id={{id}}" class="weui-media-box_appmsg" hover-class="weui-cell_active" style='padding:30rpx 30rpx 10rpx 30rpx'>
+              <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__desc school-title" style='margin-top:0rpx'>{{position_work}}</view>
+                  <view class="weui-media-box__desc item-request">{{city_name}} | {{education}} | {{working_years}}</view>
+              </view>
+              <view class="weui-media-box__bd item-right">
+                  <view class="weui-media-box__title item-salary" style='margin-top:2rpx;margin-bottom:36rpx;'>{{salary}}</view> 
+                   <view class="weui-media-box__desc item-date">{{add_time_format}}</view>  
+              </view>
+          </navigator>
+        <view class='border-bottom'></view>
+    </view> 
+  </template> 
+
+
+  <!-- 分享组件的模板 -->
+    <template name="share_job">  
+          <view class="page__ft" wx:if="{{share_count<3}}">
+              <view class="page__ft_info center">
+                  <view class="page__ft_line"></view>
+                  <text class="page__ft_desc">分享给3位幼师，查看所有职位</text>
+                  <view class="page__ft_line"></view>
+              </view>
+              <view class="page__ft_share center">
+                  <button class="page__ft_btn center" open-type="share">
+                    <image src='../../images/share_btn.png'/>
+                      还需分享<text class="share_count">{{3-share_count}}</text>位幼师
+                  </button>           
+              </view>
+          </view>
+  </template>
+
+  <!-- 加载组件的模板 -->
+    <template name="load_job">
+        <view class="page__bd">
+            <view class="weui-loadmore" wx:if="{{bottomLoading}}">
+                <view class="weui-loading"></view>
+                <view class="weui-loadmore__tips">正在加载</view>
+            </view>
+        </view>
+    </template>
+
+  <template name="refresh">
+       <view class="page__bd">
+            <view class="weui-loadmore" wx:if="{{topLoading}}">
+                <view class="weui-loading"></view>
+                <view class="weui-loadmore__tips">正在加载</view>
+            </view>
+      </view>
+  </template>

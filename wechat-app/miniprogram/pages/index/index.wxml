@@ -1,1 +1,55 @@
-<list />
+<import src="../template/list.wxml"/>
+<view class="container">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+      <block wx:for="{{images}}" wx:for-index="index" wx:key="index">  
+        <swiper-item>  
+          <image src="{{item}}" class="slide-image" mode="aspectFill"/>  
+        </swiper-item>  
+      </block>  
+    </swiper>
+
+    <!-- 菜单导航 -->
+    <view class='nav-container'>
+      <view class='nav-item' wx:for='{{navList}}' wx:key='index'>
+        <image src='{{item.logo}}' class='nav-logo'/>
+        <text class='nav-label'>{{item.text}}</text>
+      </view>
+    </view>
+
+    <!--工作岗位展示列表-->
+    <view class="job-content" style='border-top:20rpx solid #eee'>
+      <view class="job-header">
+          <view class="job-header_line"></view>
+          <text class="job-header_desc">最新爆款</text>
+          <view class="job-header_line"></view>
+      </view>
+      <block wx:for="{{list}}" wx:for-index="index" wx:key="index">
+         <template is="factory_list" data="{{...item}}"/>
+      </block>
+    </view>
+
+    <!--底部的分享banner-->
+    <view class="banner">
+      <button class="banner-content" open-type="share" style='padding:0'>
+          <image class="banner-bg" src="/images/banner.png"></image>
+          <image class="share-btn" src="/images/share_icon.png"></image>
+      </button>
+    </view>
+  </view>
+
+  <!-- 注册遮罩层 -->
+<view class='mask' wx:if="{{showMask}}">
+    <view class="mask-content">
+    <image class="mask-bg" src="/images/mask.png" />
+    <view class="form">
+        <input type="text" class="name" placeholder="姓名" bindinput='nameInput' bindblur='checkCode' />
+        <input type="number" class="mobile" placeholder="手机号" bindinput='mobileInput' bindblur='checkCode'/>
+        <view class="code">
+            <input type="number" class="code-num" placeholder="验证码" bindinput='verifyInput' value='{{verifyCode}}'/>
+            <view class="send-btn {{sendCode?'able':'disable'}}" bindtap='fetchCode'>{{counter}}</view>
+        </view>
+        <view class="submit {{isSubmit?'':'unsubmit'}}" bindtap='submit'>提交</view>
+    </view>
+    <image src='../../images/close.png' bindtap='closeMask' class='close'></image>
+  </view>
+</view>

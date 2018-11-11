@@ -1,0 +1,51 @@
+<!--pages/mine/index.wxml-->
+<view class='container'>
+  <navigator url="../profile/profile" class="weui-cell weui-cell_access header" hover-class="weui-cell_active" style="margin-top:40rpx">
+      <view class="weui-cell__hd">
+          <image src="{{userInfo.avatar}}" class='icon'/>
+      </view>
+      <view class="weui-cell__bd cell-title">
+          <text class="name">怒放的生命</text>
+          <text class="profile">个人资料</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+
+  <view class='squre-content'>
+    <view class='squre-box'>
+      <text class='suqre-num'>0</text>
+      <text class='squre-label'>邀请人数</text>
+    </view>
+    <view class='squre-box'>
+      <text class='suqre-num'>2</text>
+      <text class='squre-label'>订单数</text>
+    </view>
+    <view class='squre-box'>
+      <text class='suqre-num'>4</text>
+      <text class='squre-label'>获得积分</text>
+    </view>
+  </view>
+
+  <navigator url="../message/message" class="weui-cell weui-cell_access" hover-class="weui-cell_active" style='margin-top:40rpx'>
+      <view class="weui-cell__hd">
+          <image src="../../images/order.png"  class='icon' style="width: 40rpx;height: 36rpx"/>
+      </view>
+      <view class="weui-cell__bd cell-title">我的订单</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <view class='line'></view>
+  <navigator url="../record/prize" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+          <image src="../../images/coll.png" class='icon' style="width: 43rpx;height: 37rpx"/>
+      </view>
+      <view class="weui-cell__bd cell-title">我的收藏</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="../myShare/myShare" class="weui-cell weui-cell_access" hover-class="weui-cell_active" style='margin-top:40rpx'>
+      <view class="weui-cell__hd">
+          <image src="../../images/share.png" class='icon' style="width: 40rpx;height: 37rpx"/>
+      </view>
+      <view class="weui-cell__bd cell-title">我分享的好友</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access" style='font-size:30rpx'>进度查看</view>
+  </navigator>
+</view>

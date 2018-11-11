@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<import src="../template/list.wxml"/>
+<view class="container">
+
+<!-- 头部下拉加载条 -->
+<template is="refresh"  data="{{topLoading}}" />
+
+  <!-- 快速找工作 -->
+    <view class="page__hd center">
+      <navigator url='../findJob/findJob'>
+          <view class="page__hd_search center" >快速搜索
+              <image src="../../images/pointer.png" />
+          </view>
+      </navigator>
+    </view>
+
+ <!--工作栏tab切换-->
+    <view class="weui-tab">
+        <view class='swiper-tab'>
+            <view class="swiper-tab-item {{activeIndex==0?'active':''}}" bindtap='changeTab' data-index="0" data-page="{{currentPage[0]}}">推荐</view>
+            <view class="swiper-tab-item {{activeIndex==1?'active':''}}" bindtap='changeTab' data-index="1" data-page="{{currentPage[1]}}">全部</view>
+            <view class="swiper-tab-item {{activeIndex==2?'active':''}}" bindtap='changeTab' data-index="2" data-page="{{currentPage[2]}}">圣诞节</view>
+            <view class="swiper-tab-item {{activeIndex==3?'active':''}}" bindtap='changeTab' data-index="3" data-page="{{currentPage[3]}}">礼物</view>
+            <view class="swiper-tab-item {{activeIndex==4?'active':''}}" bindtap='changeTab' data-index="4" data-page="{{currentPage[4]}}">生日</view>
+        </view>
+        
+
+        <!-- 列表显示内容 -->            
+        <swiper current='{{activeIndex}}' bindchange='swiperTab'>
+            <swiper-item>
+                <scroll-view class='swiper-item weui-tab__content' style="height:900rpx" bindscrolltoupper="refresh"
+                scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{scrollTop}}" id="{{currentPage[1]}}">
+                    <block wx:for="{{nursery_list}}" wx:key="{{index}}">
+                          <template is="prod_list"  data="{{...item}}"/>
+                    </block> 
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view class='swiper-item weui-tab__content' style="height:900rpx" bindscrolltoupper="refresh"
+                scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{scrollTop}}" id="{{currentPage[1]}}">
+                    <block wx:for="{{nursery_list}}" wx:key="{{index}}">
+                          <template is="prod_list"  data="{{...item}}"/>
+                    </block> 
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view class='swiper-item weui-tab__content' style="height:900rpx" bindscrolltoupper="refresh"
+                scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{scrollTop}}" id="{{currentPage[1]}}">
+                    <block wx:for="{{nursery_list}}" wx:key="{{index}}">
+                          <template is="prod_list"  data="{{...item}}"/>
+                    </block> 
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view class='swiper-item weui-tab__content' style="height:900rpx" bindscrolltoupper="refresh"
+                scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{scrollTop}}" id="{{currentPage[1]}}">
+                    <block wx:for="{{nursery_list}}" wx:key="{{index}}">
+                          <template is="prod_list"  data="{{...item}}"/>
+                    </block> 
+                </scroll-view>
+            </swiper-item>
+            <swiper-item>
+                <scroll-view class='swiper-item weui-tab__content' style="height:900rpx" bindscrolltoupper="refresh"
+                scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{scrollTop}}" id="{{currentPage[1]}}">
+                    <block wx:for="{{nursery_list}}" wx:key="{{index}}">
+                          <template is="prod_list"  data="{{...item}}"/>
+                    </block> 
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+      </view>
+</view>
