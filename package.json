@@ -1,0 +1,27 @@
+{
+  "name": "shopping-online-system",
+  "version": "1.0.0",
+  "description": "This is a online  campus life platform for university students.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webstormshi/campus-shopping-online.git"
+  },
+  "keywords": [
+    "nodejs",
+    "koa2",
+    "online"
+  ],
+  "author": "shiyong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webstormshi/wxapp-react-tarojs/issues"
+  },
+  "homepage": "https://github.com/webstormshi/wxapp-react-tarojs#readme",
+  "dependencies": {
+    "koa": "^2.6.2"
+  }
+}
