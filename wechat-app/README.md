@@ -6,11 +6,11 @@ This is a wechat online platform for campus students to exchange or buy product 
 
 ## functional schedule
 * Christmas Day：
- - Sell apples: share, draw a lottery, and group to shopping...
+ Sell apples: share, draw a lottery, and group to shopping...
 * Shop coupons：
- - Shop coupons: use coupons for self, give to others, and verify thecoupon
+ Shop coupons: use coupons for self, give to others, and verify thecoupon
 * Secondhand book transaction：
- - sec-hand book platform: users can publish and others can review books messages.
+ sec-hand book platform: users can publish and others can review books messages.
 
  ## Functional screenshot
  - 注册
