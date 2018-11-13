@@ -14,3 +14,6 @@ This is a online  campus life platform for university students. this project con
 * vue-mobile-shopping
 * nodejs-koa-myssql-api
 * react-antd-backend-system
+
+## LICENSE
+MIT
