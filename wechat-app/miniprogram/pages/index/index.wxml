@@ -38,7 +38,7 @@
   </view>
 
   <!-- 注册遮罩层 -->
-<view class='mask' wx:if="{{showMask}}">
+<!-- <view class='mask' wx:if="{{showMask}}">
     <view class="mask-content">
     <image class="mask-bg" src="/images/mask.png" />
     <view class="form">
@@ -52,4 +52,4 @@
     </view>
     <image src='../../images/close.png' bindtap='closeMask' class='close'></image>
   </view>
-</view>
+</view> -->
