@@ -22,7 +22,7 @@ const user = {
    * 查找存在用户信息
    * @param  {object} formData 查找的表单数据
    * @return {object|null}      查找结果
-   */
+   */ 
   async getExistOne( formData ) {
     let resultData = await userModel.getExistOne({
       'email': formData.email,

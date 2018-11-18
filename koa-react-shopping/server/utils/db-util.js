@@ -28,7 +28,6 @@ let query = function( sql, values ) {
       }
     })
   })
-
 }
 
 let createTable = function( sql ) {

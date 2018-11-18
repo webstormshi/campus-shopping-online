@@ -40,7 +40,7 @@ const datatime = {
     let minNum = timeEnum[_date.getMinutes()]
     let secNum = timeEnum[_date.getSeconds()]
 
-    type = type || 'YYYY/MM/DD/hh/mm/ss'
+    type = type || 'YYYY-MM-DD hh:mm:ss'
 
     parseDatetime = type
       .replace('YYYY', yearNum)
