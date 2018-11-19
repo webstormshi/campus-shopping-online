@@ -11,6 +11,7 @@ const routers = router
     .get('/list', productController.productList)
     .get('/detail/:id', productController.productItem)
     .post('/delete/:id', productController.deleteProduct)
+    .get('/edit/:id', productController.editProduct)
     .post('/edit/:id', productController.editProduct)
 
 

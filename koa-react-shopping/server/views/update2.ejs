@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <div>
+        <h1><%= title %></h1>
+        <form action="/admin/edit/<%= detail.product_id%>" method="POST">
+            <input type="text" name="admin_id" value="<%= detail.prduct_id %>" hidden />
+            <input type="text" name="realname" placeholder="管理员真名" value="<%= detail.type %>" /><br/>
+            <input type="text" name="name" placeholder="管理员名" value="<%= detail.name %>" /><br/>
+            <input type="text" name="password" placeholder="管理员密码" value="<%= detail.price %>" /><br/>
+            <input type="text" name="role" placeholder="管理员角色" value="<%= detail.discount %>" /><br/>
+            <input type="text" name="mobile" placeholder="电话" value="<%= detail.express_price %>" /><br/>
+            <input type="text" name="email" placeholder="邮箱" value="<%= detail.content %>" /><br/>
+            <input type="submit" value="提交" />
+        </form>
+    </div>
+</body>
+</html>
