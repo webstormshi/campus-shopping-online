@@ -1,38 +1,45 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/shopcart/index",
     "pages/mine/index",
     "pages/product/index",
     "pages/test/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#98c8d1",
+    "navigationBarBackgroundColor": "#d81e06",
     "navigationBarTitleText": "校园活动助手",
     "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
     "color": "#999",
-    "selectedColor": "#98c8d1",
+    "selectedColor": "#d81e06",
     "backgroundColor": "#fff",
     "borderStyle": "#e0e0e0",
     "list": [
       {
         "pagePath": "pages/index/index",
         "iconPath": "images/hot_no.png",
-        "selectedIconPath": "images/hot_sel_blue.png",
+        "selectedIconPath": "images/hot_sel_red.png",
         "text": "最新活动"
       },
       {
         "pagePath": "pages/product/index",
         "iconPath": "images/prod_no.png",
-        "selectedIconPath": "images/prod_sel_blue.png",
+        "selectedIconPath": "images/prod_sel_red.png",
         "text": "产品中心"
+      },
+      {
+        "pagePath": "pages/shopcart/index",
+        "iconPath": "images/cart_no.png",
+        "selectedIconPath": "images/cart_sel_red.png",
+        "text": "购物车"
       },
       {
         "pagePath": "pages/mine/index",
         "iconPath": "images/mine_no.png",
-        "selectedIconPath": "images/mine_sel_blue.png",
+        "selectedIconPath": "images/mine_sel_red.png",
         "text": "我的"
       }
     ]

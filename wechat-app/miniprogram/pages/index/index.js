@@ -16,7 +16,7 @@ Page({
       logo: '../../images/christmas.png'
     }, {
         tid: '1',
-        text: '生日',
+        text: '优惠券',
         logo: '../../images/birthday.png'
       }, {
         tid: '1',

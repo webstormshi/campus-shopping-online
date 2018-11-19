@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <div id="app">
+        <h1><%= title %></h1>
+       <form action="/product/add" method="POST">
+            <input type="hidden" name="shop_id" value="1" /><br/>
+            <input type="text" name="name" placeholder="商品名"><br/>
+            <input type="text" name="type" placeholder="类型"><br/>
+            <input type="text" name="price" placeholder="价格"><br/>
+            <input type="text" name="discount" placeholder="折扣"><br/>
+            <input type="text" name="express_price" placeholder="快递费"><br/>
+            <input type="text" name="content" placeholder="正文"/><br/>
+            <input type="text" name="abstract" placeholder="摘要"><br/>
+            <input type="text" name="desc" placeholder="商品描述" /><br/>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>

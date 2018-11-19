@@ -76,7 +76,7 @@ page{
 }
 .suqre-num {
   font-size: 32rpx;
-  color: #98c8d1;
+  color: #d81e06;
   font-weight: bold;
 }
 .squre-label {

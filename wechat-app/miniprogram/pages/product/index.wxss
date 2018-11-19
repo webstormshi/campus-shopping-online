@@ -2,12 +2,12 @@
  .page__hd{
   width: 100%;
   height: 130rpx;
-  background: #98c8d1;
+  background: #d81e06;
 } 
 .page__hd_search{
   width: 540rpx;
   height: 80rpx;
-  background: #99a6cf;
+  background: rgb(241, 100, 24);
   border-radius: 40rpx;
   font-size: 32rpx;
   color: #fff;
