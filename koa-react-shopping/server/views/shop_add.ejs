@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <div id="app">
+        <h1><%= title %></h1>
+       <form action="/shop/add" method="POST">
+            <input type="hidden" name="admin_id" value="1" /><br/>
+            <input type="text" name="name" placeholder="店铺名"><br/>
+            <input type="text" name="description" placeholder="描述"><br/>
+            <input type="text" name="address" placeholder="地址"><br/>
+            <input type="text" name="avatar" placeholder="头像"><br/>
+            <input type="text" name="mobile" placeholder="联系店哈 u"><br/>
+            <input type="text" name="location" placeholder="位置"/><br/>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>
