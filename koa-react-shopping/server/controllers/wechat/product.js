@@ -11,9 +11,8 @@ module.exports = {
 
     // 如果是get请求
     if (ctx.url === '/product/add' && ctx.method === 'GET' ) {
-      var title = '添加商品信息'
       await ctx.render('product' , {
-        title
+        title: '添加商品信息'
       })
 
       // 如果是post请求
@@ -143,6 +142,20 @@ module.exports = {
     }
 
     const formdata = ctx.request.body
+    let id = ctx.params.id
+
+    if ( ctx.method === 'GET' ) {
+          let item = await productService.productItem(id)
+          if (item.length === 0) {
+            ctx.body = '访问的资源不存在'
+            return
+          }
+          await ctx.render('update2', {
+              title: '修改商品信息',
+              detail: item[0]
+          })
+          return
+      }
 
       let addResult = await productService.editproduct( formdata )
       if ( addResult ) {
