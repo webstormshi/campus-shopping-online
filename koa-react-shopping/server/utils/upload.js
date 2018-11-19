@@ -35,7 +35,7 @@ function uploadPicture( ctx, options) {
   }
 
   let picturePath = path.join(
-    __dirname, 
+    __dirname,
     '/../../static/output/upload/', 
     pictureType, 
     UtilDatetime.parseStampToFormat(null, 'YYYY/MM/DD'))
@@ -63,9 +63,9 @@ function uploadPicture( ctx, options) {
       let saveTo = path.join(_uploadFilePath)
       file.pipe(fs.createWriteStream(saveTo))
 
-      // file.on('data', function(data) {
-      //   console.log('File-data [' + fieldname + '] got ' + data.length + ' bytes')
-      // })
+      file.on('data', function(data) {
+        console.log('File-data [' + fieldname + '] got ' + data.length + ' bytes')
+      })
 
       file.on('end', function() {
         console.log('File-end [' + fieldname + '] Finished')
@@ -74,12 +74,13 @@ function uploadPicture( ctx, options) {
       })
     })
 
-    // busboy.on('field', function(fieldname, val, fieldnameTruncated, valTruncated, encoding, mimetype) {
-    //   console.log('Field-field [' + fieldname + ']: value: ' + inspect(val))
-    // })
-    // busboy.on('finish', function() {
-    //   console.log('Done parsing form!')
-    // })
+    busboy.on('field', function(fieldname, val, fieldnameTruncated, valTruncated, encoding, mimetype) {
+      console.log('Field-field [' + fieldname + ']: value: ' + inspect(val))
+    })
+    busboy.on('finish', function() {
+      console.log('Done parsing form!')
+      resolve(result)
+    })
 
     busboy.on('error', function(err) {
       console.log('File-error')
@@ -93,7 +94,7 @@ function uploadPicture( ctx, options) {
 
 
 module.exports =  {
-  uploadPicture,
+  uploadPicture
 }
 
 

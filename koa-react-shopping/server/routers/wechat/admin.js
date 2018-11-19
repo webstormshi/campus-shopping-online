@@ -15,6 +15,8 @@ const routers = router
     .get('/edit/:id', adminController.updateAdminInfo )
     .post('/edit/:id', adminController.updateAdminInfo)
     .post('/delete/:id', adminController.deleteAdmin)
+    .get('/upload', adminController.uploader)
+    .post('/upload', adminController.uploader)
 
 module.exports = routers
     

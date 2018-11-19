@@ -1,5 +1,6 @@
 const adminService = require('../../services/wechat/admin')
 const admninCode = require('../../codes/admin')
+const uploadFile = require('../../utils/upload').uploadPicture
 
 module.exports = {
 
@@ -182,6 +183,27 @@ module.exports = {
             result = '管理员删除失败'
         }
         ctx.body = result
+    },
+
+    /**
+     *
+     * 异步上传图片
+     * @param {*} ctx
+     */
+    async uploader( ctx ) {
+
+        if ( ctx.method === 'GET') {
+            await ctx.render('upload', {
+                title: '上传图片操作'
+            })
+            return
+        }
+
+        // 上传文件事件
+        let result = await uploadFile( ctx, {
+            fileType: 'album'
+        })
+        console.log('result', result)
     }
 
 }
