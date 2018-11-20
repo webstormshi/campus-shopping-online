@@ -14,6 +14,7 @@ const error = require('./error')
 const product = require('./wechat/product')
 const admin = require('./wechat/admin')
 const shop = require('./wechat/shop')
+const order = require('./wechat/order')
 
 router.use('/', home.routes(), home.allowedMethods())
 router.use('/api', api.routes(), api.allowedMethods())
@@ -25,6 +26,7 @@ router.use('/error', error.routes(), error.allowedMethods())
 router.use('/product', product.routes(), product.allowedMethods())
 router.use('/admin', admin.routes(), admin.allowedMethods())
 router.use('/shop', shop.routes(), shop.allowedMethods())
+router.use('/order', order.routes(), order.allowedMethods())
 
 
 module.exports = router
