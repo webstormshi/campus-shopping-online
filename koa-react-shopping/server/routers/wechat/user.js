@@ -12,6 +12,7 @@ const routes = router
   .get('/detail/:id', userController.getUserInfo)  // 获取用户信息
   .get('/wx/userInfo', userController.getWXInfo)   // 获取用户微信信息
   .get('/wx/phone', userController.getWXPhone)    //  获取用户微信电话
+  .get('/update/:id', userController.updateInfo) //  修改用户信息
   .post('/update/:id', userController.updateInfo) //  修改用户信息    
 
 

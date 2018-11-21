@@ -14,6 +14,7 @@ module.exports = {
             await ctx.render('user_signUp', {
                 title: '用户注册'
             })
+            return
         } else if ( ctx.method === 'POST' ) {
             let formdata = ctx.request.body
             let result = { success: false }
@@ -21,7 +22,7 @@ module.exports = {
             if ( regResult ) {
                 result.success = true
                 result.code = 0
-                result.data = result
+                result.data = regResult
             } else {
                 result.code = -1
                 result.message = '用户注册失败'
@@ -37,7 +38,6 @@ module.exports = {
      * @param {*} ctx
      */
     async getUserList ( ctx ) {
-        
         let result = { success: false }
         let listResult = await userService.getUserList()
         if ( listResult ) {
@@ -48,6 +48,7 @@ module.exports = {
             result.code = -1
             result.message = '获取用户列表失败'
         }
+        ctx.body = result
     },
 
      /**
@@ -124,6 +125,15 @@ module.exports = {
     async updateInfo ( ctx ) {
         
         let id = ctx.params.id
+        let userInfo = await userService.getUserInfo( id )
+        if ( ctx.method === 'GET' ) {
+            await ctx.render('user_update', {
+                title: '修改用户信息',
+                userInfo: userInfo[0]
+            })
+            return
+        }
+
         let formdata = ctx.request.body
         formdata.uid = id
         let result = { success: false }

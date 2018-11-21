@@ -25,12 +25,25 @@ const user = {
 
     /**
      *
+     * 通过openid查找用户信息
+     * @param {*} model
+     * @returns
+     */
+    async getUserByOpenId ( model ) {
+        let _sql = `SELECT * FROM user_db where openId = '${model.openId}'`
+        let result = await dbUtil.query(_sql, '*')
+        return result
+    },
+
+    /**
+     *
      * 获取用户信息
      * @param {*} model
      * @returns
      */
     async getUserInfo ( model ) {
         let _sql = `SELECT * FROM user_db WHERE uid = ${model.uid}`
+        console.log('_sql', _sql)
         let result = await dbUtil.query(_sql, '*')
         return result
     },

@@ -11,17 +11,21 @@ const user = {
      * @returns
      */
     async registerUser ( user ) {
-        let result = await userModel.insert({
+        let result = {}
+        let res = await userModel.insert({
             username: user.username,
             nickname: user.nickname,
             gender: user.gender,
             mobile: user.mobile,
             openId: user.openId,
             avatarUrl: user.avatarUrl,
-            introduce_id: user.introduce_id.introduce_id,
+            introduce_id: user.introduce_id,
             academy: user.academy,
             major: user.major
         })
+        if (res.protocol41) {
+            result = await userModel.getUserByOpenId({ openId: user.openId })
+        }
         return result
     },
 
@@ -75,7 +79,8 @@ const user = {
      * @returns
      */
     async updateInfo ( user ) {
-        let result = await userModel.updateInfo({
+        let result = {}
+        let res = await userModel.updateInfo({
             uid: user.uid,
             username: user.username,
             nickname: user.nickname,
@@ -83,10 +88,15 @@ const user = {
             mobile: user.mobile,
             openId: user.openId,
             avatarUrl: user.avatarUrl,
-            introduce_id: user.introduce_id.introduce_id,
+            introduce_id: user.introduce_id,
             academy: user.academy,
             major: user.major
         })
+
+        if (res.protocol41) {
+            result = await userModel.getUserByOpenId({ openId: user.openId })
+        }
+
         return result
     }
 }
