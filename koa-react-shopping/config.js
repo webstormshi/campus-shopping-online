@@ -8,6 +8,11 @@ const config = {
     PASSWORD: 'shiyong001',
     PORT: '3306',
     HOST: '127.0.0.1'
+  },
+
+  wechat: {
+    appId: '',
+    appsecret: ''
   }
 }
 
