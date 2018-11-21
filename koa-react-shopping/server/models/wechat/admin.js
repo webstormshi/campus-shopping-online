@@ -19,6 +19,7 @@
      */
     async getAdminInfoByNameAndPwd ( model ) {
         let _sql = `SELECT * FROM admin_db where name = '${model.name}' and password = '${model.password}' limit 1`
+        console.log('_sql', _sql)
         let result = await dbUtil.query(_sql, model)
         return result
     },
@@ -29,8 +30,8 @@
      * @param {*} model
      */
     async getAdminInfoByEmailAndPwd ( model ) {
-        let _sql = `SELECT * FROM admin_db where email = ${model.email} and password = ${model.password} limit 1`
-        let result = await dbUtil.query(_sql, model)
+        let _sql = "SELECT * FROM admin_db where email = ? and password = ? limit 1"
+        let result = await dbUtil.query(_sql, [ model.email, model.password ])
         return result
     },
 

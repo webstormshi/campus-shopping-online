@@ -52,7 +52,7 @@ const comment = {
      * 获取店铺商品评论信息
      * @returns
      */
-    async getCommentByShopId() {
+    async getCommentByShopId( id ) {
         let result = await commentModel.getCommentByShopId({shop_id: id})
         return result
     },
@@ -62,7 +62,7 @@ const comment = {
      * 获取商品的评论信息
      * @returns
      */
-    async getCommentByProductId() {
+    async getCommentByProductId( id ) {
         let result = await commentModel.getCommentByProductId({product_id: id})
         return result
     },
@@ -80,7 +80,6 @@ const comment = {
             product_id: comment.product_id,
             uid: comment.uid,
             content: comment.content,
-            publish_time: time,
             addition: comment.addition
         })
         return result

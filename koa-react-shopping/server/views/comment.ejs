@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/comment/publish" method="POST">
+        <input type="text" value="1" name="shop_id" hidden />
+        <input type="text" value="1" name="product_id" hidden />
+        <input type="text" value="1" name="uid" hidden />
+        <input type="text" name="content" placeholder='正文' /><br/>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

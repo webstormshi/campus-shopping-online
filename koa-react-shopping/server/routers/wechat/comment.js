@@ -12,6 +12,7 @@ const routes = router
   .get('/detail/:id', commentController.getCommentDetail)   // 获取评论详情
   .get('/shop/:shop_id', commentController.getCommentByShopId)   //  获取店铺商品评论信息
   .get('/product/:product_id', commentController.getCommentByProductId)  // 获取商品的评论信息
+  .get('/update/:id', commentController.updateComment)    // 修改评论信息
   .post('/update/:id', commentController.updateComment)    // 修改评论信息
   .post('/delete/:id', commentController.deleteComment)     // 删除评论信息
 

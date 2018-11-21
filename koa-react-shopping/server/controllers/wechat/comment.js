@@ -113,10 +113,20 @@ module.exports = {
      * @param {*} ctx
      */
     async updateComment ( ctx ) {
-        let result = { success: false }
         let id = ctx.params.id
-        let listlResult = await commentService.updateComment( id )
-        if ( listlResult ) {
+        let detailResult = await commentService.getCommentDetail( id )
+        if ( ctx.method === 'GET' ) {
+            await ctx.render('comment_update', {
+                title: '修改评论信息',
+                comment: detailResult[0]
+            })
+            return
+        }
+        let formdata = ctx.request.body
+        formdata.comment_id = id
+        let result = { success: false }
+        let updateResult = await commentService.updateComment( formdata )
+        if ( updateResult ) {
             result.success = true
             result.code = 0
             result.data = '评论修改成功'

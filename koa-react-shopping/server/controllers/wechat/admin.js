@@ -51,18 +51,17 @@ module.exports = {
             let formdata = ctx.request.body
 
             let signInResult = await adminService.signIn( formdata )
-
             if (signInResult && signInResult.length > 0) {
                 result.success = true
                 result.code = 0
                 result.data = {
-                    id: signInResult.admin_id,
-                    realname: signInResult.realname,
-                    name: signInResult.name,
-                    email: signInResult.e.email,
-                    role: signInResult.role,
-                    mobile: signInResult.mobile,
-                    verified: signInResult
+                    id: signInResult[0].admin_id,
+                    realname: signInResult[0].realname,
+                    name: signInResult[0].name,
+                    email: signInResult[0].email,
+                    role: signInResult[0].role,
+                    mobile: signInResult[0].mobile,
+                    verified: signInResult[0].verified
                 }
             } else {
                 result.code = -1

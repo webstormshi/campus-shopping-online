@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/comment/update/<%= comment.comment_id %>" method="POST">
+        <input type="text" name="shop_id" value="<%= comment.shop_id %>" hidden />
+        <input type="text" name="product_id" value="<%= comment.product_id %>" hidden />
+        <input type="text" name="uid" value="<%= comment.uid %>" hidden />
+        <input type="text" name="content" value='<%= comment.content %>' /><br/>
+        <input type="text" name="addition" value='<%= comment.addition %>' /><br/>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

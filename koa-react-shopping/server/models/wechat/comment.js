@@ -38,9 +38,10 @@ const comment = {
     /**
      *
      * 获取店铺商品评论信息
+     * @param {*} model
      * @returns
      */
-    async getCommentByShopId() {
+    async getCommentByShopId( model ) {
         let _sql = `SELECT * FROM comment_db WHERE shop_id = ${model.shop_id}`
         let result = await dbUtil.query(_sql)
         return result
@@ -49,9 +50,10 @@ const comment = {
     /**
      *
      * 获取商品的评论信息
+     * @param {*} model
      * @returns
      */
-    async getCommentByProductId() {
+    async getCommentByProductId( model ) {
         let _sql = `SELECT * FROM comment_db WHERE product_id = ${model.product_id}`
         let result = await dbUtil.query(_sql)
         return result
@@ -63,7 +65,8 @@ const comment = {
      * @param {*} model
      * @returns
      */
-    async updateComment ( model ) {
+    async update ( model ) {
+        console.log('model', model)
         let _sql = "UPDATE comment_db SET ? WHERE comment_id = ?"
         let result = await dbUtil.query(_sql,[ model, model.comment_id ])
         return result
