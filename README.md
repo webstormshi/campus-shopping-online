@@ -15,5 +15,8 @@ This is a online  campus life platform for university students. this project con
 * nodejs-koa-myssql-api
 * react-antd-backend-system
 
+## contact author
+Email: sy1446631745
+
 ## LICENSE
 ### MIT
