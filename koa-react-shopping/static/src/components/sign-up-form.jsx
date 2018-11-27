@@ -82,6 +82,7 @@ const SignUpForm = Form.create()(React.createClass({
     
     return (
       <Form onSubmit={this.handleSubmit}>
+       <h1 style={{textAlign: 'center', margin: '30px auto', fontSize: '20px'}}>活动行后台管理系统<br/>商家注册平台</h1>
         <FormItem
           {...formItemLayout}
           label={(

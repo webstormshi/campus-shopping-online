@@ -7,4 +7,8 @@ module.exports = {
     })
   },
 
+  async loginPage ( ctx ) {
+    await ctx.render('login')
+  }
+
 }

@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
+    <title>商家注册</title>
+    <link rel="stylesheet" href="/output/dist/css/register.css">
 </head>
 <body>
-    <div>
-        <h1><%= title %></h1>
-        <form action="/admin/register" method="POST">
-            <input type="text" name="realname" placeholder="管理员真名" /><br/>
-            <input type="text" name="name" placeholder="管理员名" /><br/>
-            <input type="text" name="password" placeholder="管理员密码" /><br/>
-            <input type="text" name="role" placeholder="管理员角色" /><br/>
-            <input type="text" name="mobile" placeholder="电话" /><br/>
-            <input type="text" name="email" placeholder="邮箱" /><br/>
-            <input type="submit" value="提交" />
-        </form>
-    </div>
+    <div id="app"></div>
+    <script src="/output/dist/js/vendor.js"></script>
+    <script src="/output/dist/js/register.js"></script>
 </body>
 </html>

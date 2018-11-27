@@ -7,6 +7,8 @@ const outputPath = path.join(__dirname, './../output/dist/');
 module.exports = {
   
   entry: {
+    'register' : './static/src/pages/register.js',
+    'login' : './static/src/pages/login.js',
     'admin' : './static/src/pages/admin.js',
     'work' : './static/src/pages/work.js',
     'index' : './static/src/pages/index.js',

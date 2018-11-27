@@ -72,7 +72,7 @@ module.exports = {
                 session.isLogin = true
                 session.name = signInResult.name
                 session.id = signInResult.admin_id
-                ctx.redirect('/admin/login')
+                ctx.redirect('/')
                 return
             }
             ctx.body = result

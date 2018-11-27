@@ -11,8 +11,10 @@ const SignInForm = Form.create()(React.createClass({
     e.preventDefault()
 
     let values = await this.getFormValues()
+    console.log('values', values)
     if ( values ) {
       let result = await signInApi( values )
+      console.log('result', result)
       if ( result && result.success === true ) {
         message.success( '登录成功！' )
         signInForm( values )
@@ -41,10 +43,11 @@ const SignInForm = Form.create()(React.createClass({
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <div style={{ width: "280px", margin: "0 auto" }}>
+      <div style={{ width: "400px", margin: '0 auto', border: '1px solid #eee', padding: '50px', background: '#fff' }}>
         <Form onSubmit={this.handleSubmit} className="login-form">
+          <h1 style={{textAlign: 'center', fontSize: '20px', color: 'red', marginBottom: '30px'}}>活动行后台管理系统</h1>
           <FormItem>
-            {getFieldDecorator('userName', {
+            {getFieldDecorator('name', {
               rules: [{ required: true, message: '请您输入账号名称！' }],
             })(
               <Input addonBefore={<Icon type="user" />} placeholder="请您输入用户名称！" />
@@ -65,7 +68,7 @@ const SignInForm = Form.create()(React.createClass({
               <Checkbox>记住登录</Checkbox>
             )}
             <a className="login-form-forgot">忘记密码</a><br/>
-            <Button type="primary" htmlType="submit" className="login-form-button">
+            <Button type="primary" htmlType="submit" className="login-form-button" style={{width: '100%', marginTop: '30px'}}>
               确定
             </Button>
           </FormItem>

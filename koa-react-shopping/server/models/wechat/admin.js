@@ -21,6 +21,7 @@
         let _sql = `SELECT * FROM admin_db where name = '${model.name}' and password = '${model.password}' limit 1`
         console.log('_sql', _sql)
         let result = await dbUtil.query(_sql, model)
+        console.log('result', result)
         return result
     },
 
