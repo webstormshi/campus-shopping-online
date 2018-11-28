@@ -19,7 +19,6 @@ const admin = {
             realname: admin.realname,
             name: admin.name,
             password: admin.password,
-            role: admin.role,
             register_time: time,
             email: admin.email,
             mobile: admin.mobile

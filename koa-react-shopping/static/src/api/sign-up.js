@@ -10,7 +10,7 @@ const signUpApi = async ( userInfo ) => {
   }
 
   let result = Request.post({
-    url: '/api/user/signUp.json',
+    url: '/admin/register',
     data: userInfo
   })
 

@@ -11,7 +11,6 @@ const SignInForm = Form.create()(React.createClass({
     e.preventDefault()
 
     let values = await this.getFormValues()
-    console.log('values', values)
     if ( values ) {
       let result = await signInApi( values )
       console.log('result', result)

@@ -17,12 +17,14 @@ const SignUpForm = Form.create()(React.createClass({
   async handleSubmit(e) {
     e.preventDefault()
     let values = await this.getFormValues()  
+    console.log('values', values)
 
     if ( values ) {
       let result = await signUpApi( values )
+      console.log('result', result)
       if ( result && result.success === true ) {
         message.success( '注册成功！' )
-        window.location.href = '/admin?signUpSuccess=true'
+        window.location.href = '/admin/login?signUpSuccess=true'
       } else if ( result && result.message ){
         message.error( result.message )
       }
@@ -81,13 +83,32 @@ const SignUpForm = Form.create()(React.createClass({
     }
     
     return (
-      <Form onSubmit={this.handleSubmit}>
-       <h1 style={{textAlign: 'center', margin: '30px auto', fontSize: '20px'}}>活动行后台管理系统<br/>商家注册平台</h1>
+      <div style={{ width: "500px", margin: '0 auto', border: '1px solid #eee', padding: '30px 10px', background: '#fff' }}>
+        <Form onSubmit={this.handleSubmit}>
+       <h1 style={{textAlign: 'center', margin: '30px auto', fontSize: '20px', color: 'red'}}>活动行后台管理系统<br/>商家注册入口</h1>
+       <FormItem
+          {...formItemLayout}
+          label={(
+            <span>
+              商户申请人姓名
+              <Tooltip title="请确保填写的姓名和您的申请人身份证上的姓名保持一致">
+                <Icon type="question-circle-o" />
+              </Tooltip>
+            </span>
+          )}
+          hasFeedback
+        >
+          {getFieldDecorator('realname', {
+            rules: [{ required: true, message: '请输入您的申请人真实姓名' }],
+          })(
+            <Input />
+          )}
+        </FormItem>
         <FormItem
           {...formItemLayout}
           label={(
             <span>
-              用户名
+              商户申请人账户
               <Tooltip title="必须是小写6-16位字母，或数字，或下划线，不能以数字开头">
                 <Icon type="question-circle-o" />
               </Tooltip>
@@ -95,15 +116,15 @@ const SignUpForm = Form.create()(React.createClass({
           )}
           hasFeedback
         >
-          {getFieldDecorator('userName', {
-            rules: [{ required: true, message: '请输入您的用户名' }],
+          {getFieldDecorator('name', {
+            rules: [{ required: true, message: '请输入您的申请人账号' }],
           })(
             <Input />
           )}
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="E-mail地址"
+          label="申请人注册邮箱"
           hasFeedback
         >
           {getFieldDecorator('email', {
@@ -118,12 +139,25 @@ const SignUpForm = Form.create()(React.createClass({
         </FormItem>
         <FormItem
           {...formItemLayout}
-          label="密码"
+          label="申请人联系电话"
+          hasFeedback
+        >
+          {getFieldDecorator('mobile', {
+            rules: [{
+              required: true, message: '请输入申请人联系电话！',
+            }],
+          })(
+            <Input />
+          )}
+        </FormItem>
+        <FormItem
+          {...formItemLayout}
+          label="设置登录密码"
           hasFeedback
         >
           {getFieldDecorator('password', {
             rules: [{
-              required: true, message: '请您输入您的账号密码！',
+              required: true, message: '请设置你的账号密码！',
             }, {
               validator: this.checkConfirm,
             }],
@@ -151,13 +185,14 @@ const SignUpForm = Form.create()(React.createClass({
           {getFieldDecorator('agreement', {
             valuePropName: 'checked',
           })(
-            <Checkbox>我已阅读 <a>《xxxx协议》</a></Checkbox>
+            <Checkbox>我已阅读 <a>《活动行商户平台公开协议》</a></Checkbox>
           )}
         </FormItem>
         <FormItem {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit" size="large">确定</Button>
+          <Button type="primary" htmlType="submit" size="large" style={{width: '100%', marginTop: '30px'}}>确定</Button>
         </FormItem>
       </Form>
+      </div>
     )
   },
 }))

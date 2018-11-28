@@ -14,6 +14,7 @@ class Work extends React.Component {
   render() {
     return (
         <Layout style={{ height: '100%' }}>
+        <HeadeNav />
           <Sider
             trigger={null}
             collapsible
