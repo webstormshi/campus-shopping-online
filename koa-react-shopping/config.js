@@ -1,11 +1,11 @@
 const config = {
 
-  port: 3001,
+  port: 3030,
 
   database: {
     DATABASE: 'Christmas',
     USERNAME: 'root',
-    PASSWORD: 'shiyong001',
+    PASSWORD: '123456',
     PORT: '3306',
     HOST: '127.0.0.1'
   },
