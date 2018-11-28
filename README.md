@@ -16,7 +16,8 @@ This is a online  campus life platform for university students. this project con
 * react-antd-backend-system
 
 ## contact author
-Email: sy1446631745
+Email: 15797675808@163.com
+Wechat: sy1446631745
 
 ## LICENSE
 ### MIT
