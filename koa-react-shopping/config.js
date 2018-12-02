@@ -5,7 +5,7 @@ const config = {
   database: {
     DATABASE: 'Christmas',
     USERNAME: 'root',
-    PASSWORD: '123456',
+    PASSWORD: 'shiyong001',
     PORT: '3306',
     HOST: '127.0.0.1'
   },

@@ -1,2 +1,15 @@
-<!--pages/shopcart/index.wxml-->
-<text>pages/shopcart/index.wxml</text>
+<view class='shopcart-container'>
+  <!-- 没有订单的数据 -->
+  <view class='no-shopcart'>
+    <image src='../../images/no-cart.png'></image>
+    <view class='nocart-title'>您还没有相关的订单</view>
+    <view class='nocart-desc'>
+      您还没有登录？请先进行
+      <text class='no-cart-link' bindtap='wxLogin'>微信登录</text>
+    </view>
+    <view class='nocart-desc'>
+      您还没有购买任何商品？请去
+      <text class='no-cart-link' bindtap='shopcartTab'>商场看看</text>吧～
+    </view>
+  </view>
+</view>

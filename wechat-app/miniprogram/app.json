@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/search/index",
+    "pages/wxLogin/index",
     "pages/shopcart/index",
     "pages/mine/index",
     "pages/product/index",

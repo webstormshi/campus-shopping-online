@@ -15,6 +15,18 @@ Page({
   
   },
 
+  shopcartTab() {
+    wx.switchTab({
+      url: '../product/index',
+    })
+  },
+
+  wxLogin() {
+    wx.navigateTo({
+      url: '../wxLogin/index',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

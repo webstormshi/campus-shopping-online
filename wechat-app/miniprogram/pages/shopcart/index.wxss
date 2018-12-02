@@ -1,1 +1,23 @@
 /* pages/shopcart/index.wxss */
+.shopcart-container {
+  min-height: 100vh;
+  background: #eee;
+  text-align: center;
+}
+.no-shopcart image {
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 100rpx;
+}
+.nocart-title {
+  font-size: 36rpx;
+  color: #333;
+}
+.nocart-desc {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+.no-cart-link {
+  color: #1296db;
+}
