@@ -19,7 +19,8 @@ const product = {
      * @returns
      */
     async getList () {
-        let result = await dbUtils.select('product_db', '*')
+        let _sql = 'SELECT * FROM product_db'
+        let result = await dbUtils.query(_sql, {})
         return result
     },
 

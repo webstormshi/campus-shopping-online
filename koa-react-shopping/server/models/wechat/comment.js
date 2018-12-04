@@ -19,7 +19,8 @@ const comment = {
      * @returns
      */
     async getCommentsAll() {
-        let result = await dbUtil.select('comment_db', '*')
+        let _sql = 'SELECT * FROM comment_db'
+        let result = await dbUtil.query(_sql, {})
         return result
     },
 

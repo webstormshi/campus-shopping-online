@@ -42,7 +42,8 @@
      * @returns
      */
     async getAdminList() {
-        let result = await dbUtil.select('admin_db', '*')
+        let _sql = 'SELECT * FROM admin_db'
+        let result = await dbUtil.query(_sql, {})
         return result
     },
 

@@ -21,8 +21,8 @@ const order = {
      * @returns
      */
     async select () {
-
-        let result = await dbUtil.select('order_db', '*')
+        let _sql = 'SELECT * FROM order_db'
+        let result = await dbUtil.query(_sql, {})
         return result
     },
 

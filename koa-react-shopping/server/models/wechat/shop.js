@@ -19,7 +19,8 @@ const shop = {
      * @returns
      */
     async getShopList () {
-        let result = await dbUtil.select('shop_db', '*')
+        let _sql = 'SELECT * FROM shop_db'
+        let result = await dbUtil.query(_sql, {})
         return result
     },
 

@@ -5,9 +5,9 @@ const config = {
   database: {
     DATABASE: 'Christmas',
     USERNAME: 'root',
-    PASSWORD: 'shiyong001',
+    PASSWORD: '123456',
     PORT: '3306',
-    HOST: '127.0.0.1'
+    HOST: '139.199.165.202'
   },
 
   wechat: {

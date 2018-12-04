@@ -19,7 +19,8 @@ const user = {
      * @returns
      */
     async getUserList () {
-        let result = await dbUtil.select('user_db', '*')
+        let _sql = 'SELECT * FROM user_db'
+        let result = await dbUtil.query(_sql, {})
         return result
     },
 
