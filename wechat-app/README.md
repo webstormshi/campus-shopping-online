@@ -21,3 +21,6 @@ This is a wechat online platform for campus students to exchange or buy product 
  <p><img src='./Layout/product_center.jpg' width='300' /></p>
  - 我的
  <p><img src='./Layout/mine_settings.jpg' width='300' /></p>
+ - 优惠券
+ 
+ <p><img src='./Layout/coupon.png' width='300' /></p>
