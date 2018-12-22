@@ -15,11 +15,15 @@ Page({
       text: '圣诞节',
       logo: '../../images/christmas.png'
     }, {
-        tid: '1',
+        tid: '2',
         text: '优惠券',
+        logo: '../../images/coupon_icon.png'
+      }, {
+        tid: '3',
+        text: '生日',
         logo: '../../images/birthday.png'
       }, {
-        tid: '1',
+        tid: '4',
         text: '礼物',
         logo: '../../images/gift.png'
       }],

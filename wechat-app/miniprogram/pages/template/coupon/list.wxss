@@ -1,0 +1,117 @@
+.coupon-center {
+  width: 690rpx;
+  height: 280rpx;
+  border-radius: 5rpx;
+  display: flex;
+  position: relative;
+  font-size: 28rpx;
+  color: #333;
+  padding: 15rpx;
+  box-sizing: border-box;
+  margin-top: 15rpx;
+  background: #fff;
+  /* border: 1px solid red; */
+}
+.coupon-left {
+  border-right: 1px dashed #999;
+}
+.coupon-right {
+  width: 300rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #cf4032;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+.coupon-left .coupon-content {
+  display: flex;
+}
+.coupon-left .coupon-slide {
+  padding: 8rpx 20rpx;
+  display: flex;
+  align-items: center;
+  font-size: 21rpx;
+}
+.coupon-left .coupon-slide .slide-width {
+  width: 310rpx;
+  background: #ededed;
+  height: 16rpx;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+}
+.coupon-left .coupon-slide .slide-precent {
+  height: 16rpx;
+  width: 50%;
+  border-radius: 8rpx;
+  background: #cf4032;
+}
+
+.coupon-left .coupon-content .coupon-box {
+  flex: 1;
+  padding-right: 20rpx;
+  font-size: 28rpx;
+}
+.coupon-left .coupon-content .coupon-box .coupon-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.coupon-left .coupon-content .coupon-box .coupon-desc {
+  font-size: 22rpx;
+  color: #666;
+  margin-top: 20rpx;
+}
+.coupon-left .coupon-content .coupon-box .coupon-strong {
+  font-size: 24rpx;
+  color: #cf4032;
+}
+.coupon-left .coupon-content .coupon-box .coupon-strong text {
+  font-weight: bold;
+  font-size: 36rpx;
+}
+.coupon-left .coupon-content image {
+  width: 180rpx;
+  height: 180rpx;
+  border: 1px solid #eee;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+  padding: 10rpx;
+}
+.coupon-right .coupon-price {
+  font-weight: bold;
+}
+.coupon-right .coupon-price text {
+  font-size: 54rpx;
+}
+.coupon-right .price-btn {
+  display: inline-block;
+  font-size: 24rpx;
+  background: #cf4032;
+  color: #fff;
+  padding: 0rpx 15rpx;
+  margin-top: 20rpx;
+}
+.coupon-center::before {
+  position: absolute;
+  content: '';
+  top: -10rpx;
+  right: 185rpx;
+  width: 20rpx;
+  height: 20rpx;
+  background: #f2f2f2;
+  border-radius: 10rpx;
+}
+.coupon-center::after {
+  position: absolute;
+  content: '';
+  bottom: -10rpx;
+  right: 185rpx;
+  width: 20rpx;
+  height: 20rpx;
+  background: #f2f2f2;
+  border-radius: 10rpx;
+}

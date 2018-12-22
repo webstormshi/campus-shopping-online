@@ -1,0 +1,15 @@
+<view class='coupon'>
+
+  <!-- 没有优惠券 -->
+  <view styleName='no-ticket-box'>
+      <image src='/images/no-ticket.png' />
+      <view styleName='no-ticket-desc'>您尚未拥有优惠券，快去创建吧！</view>
+  </view>
+
+
+
+  
+  <view class='coupon-btn-box'>
+    <button class='coupon-btn'>创建优惠券</button>
+  </view>
+</view>

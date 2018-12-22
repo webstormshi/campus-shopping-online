@@ -1,0 +1,25 @@
+<template name='coupon-list'>
+  <view class='coupon-center'>
+    <view class='coupon-left'>
+      <view class='coupon-content'>
+        <image src='/images/shopping.jpg' />
+        <view class='coupon-box'>
+          <view class='coupon-title'>我是华为荣耀手机,有需要的啊剋联有需要的啊剋联系我</view>
+          <view class='coupon-desc'>拼单价：¥ 23.99</view>
+          <view class='coupon-strong'>领券后：¥ <text>13.99</text></view>
+        </view>
+      </view>
+      <view class='coupon-slide'>
+        <view class='slide-width'>
+          <view class='slide-precent'></view>
+        </view>
+        <text class='slide-desc'>券剩余109%</text>
+      </view>
+    </view>
+    <view class='coupon-right'>
+      <view class='coupon-price'>¥ <text>21</text></view>
+      <view class='price-desc'>无门槛券</view>
+      <button class='price-btn'>立即领取</button>
+    </view>
+  </view>
+</template>

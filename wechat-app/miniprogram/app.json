@@ -4,6 +4,9 @@
     "pages/search/index",
     "pages/wxLogin/index",
     "pages/shopcart/index",
+    "pages/coupon_module/couponcenter/index",
+    "pages/coupon_module/mycoupon/index",
+    "pages/coupon_module/createcoupon/index",
     "pages/mine/index",
     "pages/product/index",
     "pages/test/index"
