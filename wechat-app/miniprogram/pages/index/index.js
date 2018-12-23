@@ -20,10 +20,14 @@ Page({
         logo: '../../images/coupon_icon.png'
       }, {
         tid: '3',
-        text: '生日',
-        logo: '../../images/birthday.png'
+        text: '二手物品',
+        logo: '../../images/sechand.png'
       }, {
         tid: '4',
+        text: '活动',
+        logo: '../../images/activity.png'
+      }, {
+        tid: '5',
         text: '礼物',
         logo: '../../images/gift.png'
       }],

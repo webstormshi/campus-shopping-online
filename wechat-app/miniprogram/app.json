@@ -1,5 +1,12 @@
 {
   "pages": [
+    "pages/activity_module/activitycenter/index",
+    "pages/activity_module/activitydetail/index",
+    "pages/activity_module/activityorder/index",
+    "pages/activity_module/myActivity/index",
+    "pages/activity_module/activityProfile/index",
+    "pages/activity_module/activitySucc/index",
+    "pages/activity_module/activityTicket/index",
     "pages/index/index",
     "pages/search/index",
     "pages/wxLogin/index",
