@@ -1,9 +1,9 @@
 # campus-shopping-online
 
-## introduction
+## Introduction
 This is a online  campus life platform for university students. this project contains four sub-systems, the System property is a B2C platform, business people can Registered merchants, sell Display and sell goods,  
 
-## composition
+## Composition
 - WeChat applet system
 - WeChat web mall system 
 - pruduct backstage management system
@@ -15,7 +15,7 @@ This is a online  campus life platform for university students. this project con
 * nodejs-koa-myssql-api
 * react-antd-backend-system
 
-## contact author
+## Contact author
 - Email: 15797675808@163.com
 - Wechat: sy1446631745
 
